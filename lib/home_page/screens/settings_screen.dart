@@ -1,8 +1,25 @@
-import 'package:deliveryapp/View/first%20logins/license_page.dart';
-import 'package:deliveryapp/login_module/view/login.dart';
 import 'package:deliveryapp/app_confiq/app_colors.dart';
+import 'package:deliveryapp/login_module/view/login.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+class LicensePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('License Page'),
+        backgroundColor: Colors.blue,
+      ),
+      body: Center(
+        child: Text(
+          'License Page',
+          style: TextStyle(fontSize: 24),
+        ),
+      ),
+    );
+  }
+}
 
 class SettingsScreen extends StatelessWidget {
   @override
@@ -43,7 +60,7 @@ class SettingsScreen extends StatelessWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text(
-            'Confirm Logout hhhh',
+            'Confirm Logout!',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
           content: Text(
@@ -88,24 +105,6 @@ class SettingsScreen extends StatelessWidget {
           ],
         );
       },
-    );
-  }
-}
-
-class LicensePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('License Page'),
-        backgroundColor: Colors.blue,
-      ),
-      body: Center(
-        child: Text(
-          'License Page',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
     );
   }
 }
